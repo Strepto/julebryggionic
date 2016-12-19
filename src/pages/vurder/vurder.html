@@ -1,16 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Vurder {{drikke.Navn}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
   <ion-card-header>
-    Crazy Reindeer Christmas Ale 2016
+    {{drikke.Navn}}
   </ion-card-header>
   <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    {{drikke.Type}}
   </ion-card-content>
 </ion-card>
 <form (ngSubmit)="logForm()">

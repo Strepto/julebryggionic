@@ -1,0 +1,28 @@
+<!--
+  Generated template for the Vurderliste page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>vurderliste</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let drikke of drikker" (click)="drikkeTapped($event, drikke)">
+  <img [src]="drikke.Bilde"  style="max-width: 100%; height: 140px; object-fit: cover; overflow: hidden" />
+  <ion-card-content>
+    <ion-card-title>
+      {{ drikke.Navn }}
+      </ion-card-title>
+      {{ drikke.Bryggeri }}
+      <br />
+      <span>Alkohol: {{ drikke.Abv}}%</span>
+  </ion-card-content>
+</ion-card>
+</ion-content>
