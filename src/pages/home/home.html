@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+  <ion-card-header>
+    Crazy Reindeer Christmas Ale 2016
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+<form (ngSubmit)="logForm()">
+  
+<ion-item>
+  <ion-range [(ngModel)]="rating.Karakter" name="karakter">
+    <ion-icon range-left name="thumbs-down"></ion-icon>
+    <ion-icon range-right name="thumbs-up" color="danger"></ion-icon>
+  </ion-range> 
+</ion-item>
+
+  <ion-item>
+    <ion-label> Smaker jul?</ion-label>
+    <ion-toggle [(ngModel)]="rating.SmakerJul" name="smakerjul" checked="false"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nøkkelord</ion-label>
+    <ion-input type="text" [(ngModel)]="rating.Nokkelord" placeholder="1 beskrivende ord" name="nokkelord" ></ion-input>
+  </ion-item>
+  <button ion-button block icon-left>
+    <ion-icon name="home"></ion-icon>
+      Lagre
+    </button>
+</form>
+</ion-content>
